@@ -8,10 +8,10 @@ customElements.define(
             shadowRoot.innerHTML = `
         <style>#tabs { ... }</style> <!-- styles are scoped to fancy-tabs! -->
         <div id="tabs">
-            shadow tabs
+            <slot id="tabsSlot" name="title"></slot>
         </div>
         <div id="panels">
-            shadow panels
+            <slot id="panelsSlot"></slot>
         </div>
       `
         }
