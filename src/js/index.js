@@ -2,11 +2,19 @@ customElements.define(
     'fancy-tabs',
     class extends HTMLElement {
         constructor() {
-            super() // always call super() first in the constructor.
+            super()
 
             const shadowRoot = this.attachShadow({ mode: 'open' })
             shadowRoot.innerHTML = `
-        <style>#tabs { ... }</style> <!-- styles are scoped to fancy-tabs! -->
+        <style>
+            #tabs {
+                color: white;
+                background-color: black;
+            }
+            #panels {
+                background-color: green;
+            }
+        </style>
         <div id="tabs">
             <slot id="tabsSlot" name="title"></slot>
         </div>
