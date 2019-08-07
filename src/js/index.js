@@ -7,6 +7,14 @@ customElements.define(
             const shadowRoot = this.attachShadow({ mode: 'open' })
             shadowRoot.innerHTML = `
         <style>
+            :host {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid red;
+            }
+            :hover {
+                border: 3px solid red;
+            }
             #tabs {
                 color: white;
                 background-color: black;
